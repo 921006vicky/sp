@@ -1,0 +1,97 @@
+複製林思伶的程式碼，執行
+# 執行
+```
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/03$ ./test.sh 
+++ gcc -w c4.c -o c4
+++ ./c4 -s test/power.c
+1> ENT  0
+2> IMM  1454338393
+3> PSH
+4> IMM  3
+5> PSH
+6> IMM  2
+7> PSH
+8> JSR  1805897744
+9> ENT  0
+10> LLA  2
+11> LI
+12> PSH
+13> IMM  0
+14> LT
+15> BZ   1805898016
+16> LLA  2
+17> LI
+18> PSH
+19> IMM  0
+20> EQ
+21> BZ   1805898128
+22> LLA  3
+23> LI
+24> PSH
+25> LLA  3
+26> LI
+27> PSH
+28> LLA  2
+29> LI
+30> PSH
+31> IMM  1
+32> SUB
+33> PSH
+34> JSR  1805897744
+35> ENT  0
+36> LLA  2
+37> LI
+38> PSH
+39> IMM  0
+40> LT
+41> BZ   1805898016
+42> LLA  2
+43> LI
+44> PSH
+45> IMM  0
+46> EQ
+47> BZ   1805898128
+48> LLA  3
+49> LI
+50> PSH
+51> LLA  3
+52> LI
+53> PSH
+54> LLA  2
+55> LI
+56> PSH
+57> IMM  1
+58> SUB
+59> PSH
+60> JSR  1805897744
+61> ENT  0
+62> LLA  2
+63> LI
+64> PSH
+65> IMM  0
+66> LT
+67> BZ   1805898016
+68> LLA  2
+69> LI
+70> PSH
+71> IMM  0
+72> EQ
+73> BZ   1805898128
+74> IMM  1
+75> LEV
+76> ADJ  2
+77> MUL
+78> LEV
+79> ADJ  2
+80> MUL
+81> LEV
+82> ADJ  2
+83> PSH
+84> PRTF
+power=9
+85> ADJ  2
+86> LEV
+87> PSH
+88> EXIT
+exit(8) cycle = 88
+```
