@@ -33,3 +33,64 @@ skip(";");
 
 emit("(L%d)\n", doEnd);
 發出一個標籤 L，對應於 doEnd，表示 do-while 循環的結束位置。這會在生成的代碼中插入一行，如 (L1)。這行標籤在跳出循環後使用。
+
+
+# 執行
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make clean
+rm -f *.o *.exe
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ rm -f *.o *.exe
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make
+gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ ./compiler test/while.c
+i = 1;
+while (i<10) i = i + 1;
+
+========== lex ==============
+token=i
+token==
+token=1
+token=;
+token=while
+token=(
+token=i
+token=<
+token=10
+token=)
+token=i
+token==
+token=i
+token=+
+token=1
+token=;
+========== dump ==============
+0:i
+1:=
+2:1
+3:;
+4:while
+5:(
+6:i
+7:<
+8:10
+9:)
+10:i
+11:=
+12:i
+13:+
+14:1
+15:;
+============ parse =============
+t0 = 1
+i = t0
+(L0)
+t1 = i
+t2 = 10
+t3 = t1 < t2
+if not T3 goto L1
+t4 = i
+t5 = 1
+t6 = t4 + t5
+i = t6
+goto L0
+(L1)
