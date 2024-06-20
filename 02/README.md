@@ -35,16 +35,17 @@ emit("(L%d)\n", doEnd);
 發出一個標籤 L，對應於 doEnd，表示 do-while 循環的結束位置。這會在生成的代碼中插入一行，如 (L1)。這行標籤在跳出循環後使用。
 
 
-執行
-vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make clean
-rm -f *.o *.exe
-vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ rm -f *.o *.exe
-vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make
-gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
-vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
-vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ ./compiler test/while.c
-i = 1;
-while (i<10) i = i + 1;
+# 執行
+
+## vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make clean
+## rm -f *.o *.exe
+## vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ rm -f *.o *.exe
+## icky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ make
+## gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+## vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+## vicky@LAPTOP-9KHSH2NS:/mnt/c/systemdesign/sp/02$ ./compiler test/while.c
+## i = 1;
+## while (i<10) i = i + 1;
 
 ========== lex ==============
 token=i
